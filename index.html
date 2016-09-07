@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sin Hambre | Inicio</title>
+		<meta name="author" content="ely,captaincode,diegoc237">
+		<meta name="robots" content="noindex,nofollow">
+		<meta charset="utf8">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		
+		<link rel="shorcut icon" href="img/logo.jpg">
+		<link rel="stylesheet" href="libs/bower_components/materialize/dist/css/materialize.min.css" media="all">
+		<link rel="stylesheet/less" href="libs/app/app.less">
+		<link rel="stylesheet" href="libs/bower_components/slick/slick.min.css" media="all">
+		<script src="libs/bower_components/less/dist/less.min.js"></script>
+		<script src="libs/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="libs/bower_components/materialize/dist/js/materialize.min.js"></script>
+		<script src="libs/bower_components/materialize/dist/js/materialize.min.js"></script>
+		<script src="libs/bower_components/slick/slick.min.js"></script>
+		
+		<style>
+		.slick-dots {
+			text-align: center;
+		margin: 0 0 10px 0;
+		padding: 0;
+		li {
+		display:inline-block;
+		margin-left: 4px;
+		margin-right: 4px;
+		&.slick-active {
+		button {
+		background-color:black;
+		}
+		}
+		button {
+		font: 0/0 a;
+		text-shadow: none;
+		color: transparent;
+		background-color:#999;
+		border:none;
+		width: 15px;
+		height: 15px;
+		border-radius:50%;
+		}
+				:hover{
+					background-color: black;
+				}
+		}
+		}
+		/* Custom Arrow */
+		.prev{
+			color: #999;
+			position: absolute;
+			top: 38%;
+			left: -2em;
+			font-size: 1.5em;
+				:hover{
+					cursor: pointer;
+					color: black;
+				}
+		}
+		.next{
+			color: #999;
+			position: absolute;
+			top: 38%;
+			right: -2em;
+			font-size: 1.5em;
+			:hover{
+					cursor: pointer;
+					color: black;
+				}
+		}
+		@media screen and (max-width: 800px) {
+		.next {
+		display: none !important;
+		}
+		}
+		</style>
+	</head>
+	<body>
+		<nav>
+			<div class="nav-wrapper brown" id="parallax-menu">
+				<a href="#" class="brand-logo left">
+					<img src="img/logo.jpg">
+				</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li class="waves-effect brown"><a href="">Reservaciones</a></li>
+					<li class="waves-effect brown"><a href="">Pedir comida</a></li>
+					<li class="waves-effect brown"><a href="">Acerca de</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div id="parallax-container">
+			<div class="row">
+				<div class="xs12 s12 m12 l12 imgcontainer">
+					<div id="pull-container">
+						<img src="img/mainbanner.jpg" class="background">
+					</div>
+					<div id="text-container">
+						<h1 class="black-text">Sin Hambre</h1>
+					</div>
+					<div id="parallax-buttons">
+						<a href="#!" class="waves-effect orange btn-large center-align"><i class="material-icons left">av_timer</i>Reservaciones</a>
+						<a href="#!" class="waves-effect green btn-large center-align"><i class="material-icons left">message</i>pedir comida</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row" id="parallax-search">
+			<div class="col s3"></div>
+			<div class="col s8">
+				<div class="input-field col s8">
+					<i class="material-icons prefix">search</i>
+					<input type="text" id="autocomplete-input" class="autocomplete">
+					<label for="autocomplete-input">Nombre del restaurante</label>
+				</div>
+			</div>
+			<div class="col s3"></div>
+		</div>
+		
+		<div class="row">
+			<div class="col s12">
+				<div class="slider responsive">
+					<div>
+						<img src="img/pastafinal0.jpg" alt="" />
+					</div>
+					<div>
+						<img src="img/pastafinal0.jpg" alt="" />
+					</div>
+					<div>
+						<img src="img/pastafinal0.jpg" alt="" />
+					</div>
+					<div>
+						<img src="img/pastafinal0.jpg" alt="" />
+					</div>
+					<div>
+						<img src="img/pastafinal0.jpg" alt="" />
+					</div>
+					<div>
+						<img src="img/pastafinal0.jpg" alt="" />
+					</div>
+					<div>
+						<img src="img/pastafinal0.jpg" alt="" />
+					</div>
+					<div>
+						<img src="img/pastafinal0.jpg" alt="" />
+					</div>
+				</div>
+				<!-- control arrows -->
+				<div class="prev">
+					<i class="material-icons small">skip_previous</i>					
+				</div>
+				<div class="next">
+					<i class="material-icons small">skip_next</i>	
+				</div>
+			</div>
+		</div>
+		<script>
+			$(document).ready(function(){
+				$("input.autocomplete").autocomplete({
+					data:{
+						"Lukumbe": null,
+						"La Madalena": null,
+						"El Jarro Café": null
+					}
+				});
+				$('.responsive').slick({
+		dots: false,
+		prevArrow: $('.prev'),
+		nextArrow: $('.next'),
+		infinite: true,
+		speed: 300,
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		responsive: [
+		{
+		breakpoint: 1024,
+		settings: {
+		slidesToShow: 3,
+		slidesToScroll: 3,
+		infinite: true,
+		dots: true
+		}
+		},
+		{
+		breakpoint: 600,
+		settings: {
+		slidesToShow: 2,
+		slidesToScroll: 2
+		}
+		},
+		{
+		breakpoint: 480,
+		settings: {
+		slidesToShow: 1,
+		slidesToScroll: 1
+		}
+		}
+		// You can unslick at a given breakpoint now by adding:
+		// settings: "unslick"
+		// instead of a settings object
+		]
+		});
+			});
+		</script>
+	</body>
+</html>
