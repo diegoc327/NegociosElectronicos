@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Pagar comida</title>
+		<title>Reservaciones</title>
 		<meta charset="utf8">
 
 		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
@@ -28,32 +28,56 @@
 		</nav>
 
 		<div class="banner">
-			<img src="img/creditcardbanner.jpg">
+			<img src="img/restaurant.jpg">
 		</div>
 
-		<div class="container">
-			<div class="row">
-				<h1 class="green-text center-align pacifico">Formulario de pago</h1>
+		<div class="container row">
+			<h1 class="red-text center-align pacifico">Reservaciones</h1>
+			<form class="row">
 				<div class="input-field col s12 m12 l6">
 					<input type="text" id="name" name="name" class="validate">
 					<label for="name">Nombre</label>
 				</div>
 				<div class="input-field col s12 m12 l6">
-					<input type="text" id="address" name="address" class="validate">
-					<label for="address">Dirección</label>
-				</div>
-				<div class="input-field col s12 m12 l6">
-					<input type="text" id="tel" name="tel" class="validate">
-					<label for="tel">Teléfono de casa</label>
-				</div>
-				<div class="input-field col s12 m12 l6">
 					<input type="text" id="cel" name="cel" class="validate">
 					<label for="cel">Celular</label>
 				</div>
-				<div class="col s12 m12 l12 center-align">
-					<a href="src/requestresolver.php?action=buyfood" class="btn waves-effect waves-green green">Realizar pedido</a>
+				<div class="input-field col s12 m12 l6">
+					<select class="browser-default">
+						<option selected>Hora</option>
+						<option value="9:00">9:00</option>
+						<option value="10:00">10:00</option>
+						<option value="11:00">11:00</option>
+						<option value="12:00">12:00</option>
+						<option value="13:00">13:00</option>
+						<option value="14:00">14:00</option>
+						<option value="15:00">15:00</option>
+						<option value="16:00">16:00</option>
+						<option value="17:00">17:00</option>
+						<option value="18:00">18:00</option>
+						<option value="19:00">19:00</option>
+						<option value="20:00">20:00</option>
+						<option value="21:00">21:00</option>
+						<option value="22:00">22:00</option>
+					</select>
 				</div>
-			</div>
+				<div class="input-field col s12 m12 l6">
+					<select class="browser-default">
+						<option selected>Número de personas</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+					</select>
+				</div>
+				<div class="col s12 m12 l12 center-align" style="padding-top: 20px;">
+					<a href="src/requestresolver.php?action=reservation" class="btn waves-effect waves-green green">Reservar</a>
+				</div>
+			</form>
 		</div>
 	</body>
 </html>

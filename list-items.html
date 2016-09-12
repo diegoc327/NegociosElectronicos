@@ -1,8 +1,186 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Restaurantes</title>
+		<meta charset="utf8">
+		
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="shorcut icon" href="img/logo.jpg">
+		<link rel="stylesheet" href="libs/bower_components/materialize/dist/css/materialize.min.css" media="all">
+		<link rel="stylesheet/less" href="libs/app/app.less">
+		<script src="libs/bower_components/less/dist/less.min.js"></script>
+		<script src="libs/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="libs/bower_components/materialize/dist/js/materialize.min.js"></script>
+		<script>
+			if(document.cookie == "operation=reservation")
+				location.href = "reservations.html";
+			$(document).ready(function(){
+				var restaurant = window.location.search.slice(1);
+				restaurant.split("=");
+				restaurant = restaurant[1];
+				document.title = "Ordenar comida del restaurant "+restaurant;
+			});
+		</script>
 	</head>
 	<body>
+		<nav>
+			<div class="nav-wrapper brown" id="parallax-menu">
+				<a href="index.html" class="brand-logo left">
+					<img src="img/logo.jpg">
+				</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li class="waves-effect brown"><a href="reservations.html">Reservaciones</a></li>
+					<li class="waves-effect brown"><a href="index.html#parallax-search">Pedir comida</a></li>
+					<li class="waves-effect brown"><a href="index.html#about">Acerca de</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div class="banner">
+			<img src="img/winebanner.jpg">
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col s4"><a href="payment.html" class="waves-effect green btn-large" style="margin-top:20px;">Comprar</a></div>
+			</div>
+			<div class="row" id="parallax-food">
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/1.jpg" alt="">
+					<p class="blue-text">Sandwich de pollo</p>
+					<p><input type="checkbox" id="check1"><label for="check1">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/2.jpg" alt="">
+					<p class="blue-text">Baguette</p>
+					<p><input type="checkbox" id="check2"><label for="check2">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/3.jpg" alt="">
+					<p class="blue-text">Baguette integral</p>
+					<p><input type="checkbox" id="check3"><label for="check3">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/4.jpg" alt="">
+					<p class="blue-text">Café expresso</p>
+					<p><input type="checkbox" id="check4"><label for="check4">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/5.jpg" alt="">
+					<p class="blue-text">Huevos con ensalada</p>
+					<p><input type="checkbox" id="check5"><label for="check5">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/6.jpg" alt="">
+					<p class="blue-text">Ensalada de pollo</p>
+					<p><input type="checkbox" id="check6"><label for="check6">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/7.jpg" alt="">
+					<p class="blue-text">Churros</p>
+					<p><input type="checkbox" id="check7"><label for="check7">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/8.jpg" alt="">
+					<p class="blue-text">Comida Koreana</p>
+					<p><input type="checkbox" id="check8"><label for="check8">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/9.jpg" alt="">
+					<p class="blue-text">Comida China</p>
+					<p><input type="checkbox" id="check9"><label for="check9">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/10.jpg" alt="">
+					<p class="blue-text">Comida Japonesa</p>
+					<p><input type="checkbox" id="check10"><label for="check10">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/11.jpg" alt="">
+					<p class="blue-text">Empanadas</p>
+					<p><input type="checkbox" id="check11"><label for="check11">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/12.jpg" alt="">
+					<p class="blue-text">Rollos de jamón</p>
+					<p><input type="checkbox" id="check12"><label for="check12">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/13.jpg" alt="">
+					<p class="blue-text">Cereal integral</p>
+					<p><input type="checkbox" id="check13"><label for="check13">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/14.jpg" alt="">
+					<p class="blue-text">Omelet</p>
+					<p><input type="checkbox" id="check14"><label for="check14">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/15.jpg" alt="">
+					<p class="blue-text">Ensalada de frutas</p>
+					<p><input type="checkbox" id="check15"><label for="check15">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/16.jpg" alt="">
+					<p class="blue-text">Hot cakes</p>
+					<p><input type="checkbox" id="check16"><label for="check16">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/17.jpg" alt="">
+					<p class="blue-text">Camarones</p>
+					<p><input type="checkbox" id="check17"><label for="check17">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/18.jpg" alt="">
+					<p class="blue-text">Cortes finos de res</p>
+					<p><input type="checkbox" id="check18"><label for="check18">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/19.jpg" alt="">
+					<p class="blue-text">Helado napolitano</p>
+					<p><input type="checkbox" id="check19"><label for="check19">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/20.jpg" alt="">
+					<p class="blue-text">Panes rellenos</p>
+					<p><input type="checkbox" id="check20"><label for="check20">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/21.jpg" alt="">
+					<p class="blue-text">Pollo empanizado</p>
+					<p><input type="checkbox" id="check21"><label for="check21">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/22.jpg" alt="">
+					<p class="blue-text">Malteada de chocolate</p>
+					<p><input type="checkbox" id="check22"><label for="check22">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/23.jpg" alt="">
+					<p class="blue-text">Pizza veggie</p>
+					<p><input type="checkbox" id="check23"><label for="check23">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/24.jpg" alt="">
+					<p class="blue-text">Pizza hawaiana</p>
+					<p><input type="checkbox" id="check24"><label for="check24">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/25.jpg" alt="">
+					<p class="blue-text">Pay de queso</p>
+					<p><input type="checkbox" id="check25"><label for="check25">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/26.jpg" alt="">
+					<p class="blue-text">Sandwich de atún</p>
+					<p><input type="checkbox" id="check26"><label for="check26">Ordenar</label></p>
+				</div>
+				<div class="col s12 m6 l3 food">
+					<img src="img/small/27.jpg" alt="">
+					<p class="blue-text">Sandwich de jamón</p>
+					<p><input type="checkbox" id="check27"><label for="check27">Ordenar</label></p>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
