@@ -11,7 +11,9 @@ Es una plataforma que facilita a los restaurantes la gestión de procesos, como 
     3. Elizabeth González.
 
 ## Modelo de ramificaciones
-    El modelo de ramificaciones se planeó implementar a partir de la tercera iteración, en las cuales se almacenará las diferentes versiones del producto mínimo viable.
+> El modelo de ramificaciones se planeó implementar a partir de la tercera iteración, en las cuales se almacenará las diferentes versiones del producto mínimo viable.
+
+![branch model image](https://raw.githubusercontent.com/captaincode0/NegociosElectronicos/master/img/snapshots/branchmodel.png)
 
 * Master: Rama principal del proyecto, se guarda la iteración actual del producto mínimo viable, para ser desplegado en heroku.
 * Backup: Rama en la que se almacena el producto mínimo viable de la iteración anterior.
