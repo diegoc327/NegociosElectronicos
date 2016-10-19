@@ -4,37 +4,69 @@
 		<title>Error 404</title>
 		<meta charset="utf8">
 		<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0">
-
+		
 		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-		<link rel="stylesheet" href="libs/bower_components/materialize/dist/css/materialize.min.css" media="all">
-		<link rel="stylesheet/less" href="libs/app/app.less">
-
-		<script src="libs/bower_components/less/dist/less.min.js"></script>
-		<script src="libs/bower_components/jquery/dist/jquery.min.js"></script>
-		<script src="libs/bower_components/materialize/dist/js/materialize.min.js"></script>
+		
+		<link rel="shorcut icon" href="http://sinhambre.herokuapp.com/img/logo.jpg">
+		<link rel="stylesheet" href="http://sinhambre.herokuapp.com/libs/bower_components/materialize/dist/css/materialize.min.css" media="all">
+		<link rel="stylesheet/less" href="http://sinhambre.herokuapp.com/libs/app/app.less">
+		<script src="http://sinhambre.herokuapp.com/libs/bower_components/less/dist/less.min.js"></script>
+		<script src="http://sinhambre.herokuapp.com/libs/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="http://sinhambre.herokuapp.com/libs/bower_components/materialize/dist/js/materialize.min.js"></script>
+		<script src="http://sinhambre.herokuapp.com/libs/app/app.js"></script>
 	</head>
 	<body>
-		<nav>
-			<div class="nav-wrapper brown" id="parallax-menu">
-				<a href="index.html" class="brand-logo left">
-					<img src="img/logo.jpg">
-				</a>
-				<ul id="nav-mobile" class="right hide-on-med-and-down">
-					<li class="waves-effect brown"><a href="reservations.html">Reservaciones</a></li>
-					<li class="waves-effect brown"><a href="index.html#parallax-search">Pedir comida</a></li>
-					<li class="waves-effect brown"><a href="inex.html#parallax-search">Acerca de</a></li>
-				</ul>
-			</div>
+		<ul id="slide-out" class="side-nav">
+			<li><img src="img/logo.jpg" class="logo responsive-img circle valign-wrapper"></li>
+			<li class="waves-effect black"><a href="#section2">Acerca de Sin Hambre</a></li>
+			<li class="waves-effect black"><a href="#section3">Se un proveedor de comida</a></li>
+			<li class="waves-effect black"><a href="#section3">Se un usuario de la plataforma</a></li>
+		</ul>
+		<nav class="generalmenu z-depth-0">
+			<h5 class="orange-text left">
+			<a href="#!" data-activates="slide-out" class="btn-collapse nav-menu-icon left waves-effect black-text"><i class="material-icons">view_headline</i></a>
+				<a href="http://sinhambre.herokuapp.com/" class="brand">Sin Hambre</a>
+			</h5>
 		</nav>
 
-		<div class="container error">
-			<div class="row">
-				<div class="col s12 m12 l12 center-align">
-					<h1 class="red-text">Error 404</h1>
-					<p>El sitio se encuentra en construcción, proximamente estaremos disponibles.</p>
-				</div>
+		<div id="section1" class="row">
+			<div class="col s12 m12 l6 offset-l3 center-align">
+				<h3 class="red-text pacifico"><i>"Próximamente estaremos disponibles"</i></h3>
+				<p>Déjanos tus datos para saber que estás interesado en la plataforma, llena el siguiente formulario que se encuentra en la parte de abajo.</p>
+			</div>
+			<div class="col s12 m12 l6 offset-l3">
+				<form action="http://sinhambre.herokuapp.com/src/requestresolver.php?action=newregister" method="post">
+					<div class="col s12 m12 l12 input-field">
+						<i class="material-icons prefix">account_circle</i>
+						<input type="text" name="name" id="name">
+						<label for="name">Nombre</label>
+					</div>
+					<div class="col s12 m12 l12 input-field">
+						<i class="material-icons prefix">email</i>
+						<input type="email" name="email" id="email" class="validate">
+						<label for="email">Correo electrónico</label>
+					</div>
+					<div class="col s12 m12 l12">
+						<input type="radio" name="paymenttype" value="credit card" id="creditcard">
+						<label for="creditcard">Tarjeta de crédito</label>
+					</div>
+					<div class="col s12 m12 l12">
+						<input type="radio" name="paymenttype" value="debit card" id="debitcard">
+						<label for="debitcard">Tarjeta de débito</label>
+					</div>
+					<div class="col s12 m12 l12">
+						<input type="radio" name="paymenttype" value="cash" id="cash">
+						<label for="cash">Efectivo</label>
+					</div>
+					<div class="col s12 m12 l12">
+						<input type="radio" name="paymenttype" value="thirdparty" id="thirdparty">
+						<label for="thirdparty">Servicios de terceros [paypal,amazon,mercadopago,oxxo]</label>
+					</div>
+					<div class="col s12 m12 l12 center-align" style="margin-top: 20px;">
+						<button type="submit" class="btn-large green white-text waves-effect">enviar datos</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</body>

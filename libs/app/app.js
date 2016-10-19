@@ -5,5 +5,15 @@ $(document).ready(function(){
 		closeOnClick: true
 	});
 
-  	$('.carousel.carousel-slider').carousel({full_width: true});        
+  	$('.collapsible').collapsible();
+    
+    $('.slider').slider({
+        full_width: true
+    });
+    
+    $('.materialboxed').materialbox();
+
+  	setInterval(function(){
+  		$(".carousel.carousel-slider").carousel("next");
+  	}, 4000);
 });

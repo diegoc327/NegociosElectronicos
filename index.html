@@ -9,54 +9,131 @@
 		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		
-		<link rel="shorcut icon" href="img/logo.jpg">
-		<link rel="stylesheet" href="libs/bower_components/materialize/dist/css/materialize.min.css" media="all">
-		<link rel="stylesheet/less" href="libs/app/app.less">
-		<script src="libs/bower_components/less/dist/less.min.js"></script>
-		<script src="libs/bower_components/jquery/dist/jquery.min.js"></script>
-		<script src="libs/bower_components/materialize/dist/js/materialize.min.js"></script>
-		<script src="libs/app/app.js"></script>
+		<link rel="shorcut icon" href="http://sinhambre.herokuapp.com/img/logo.jpg">
+		<link rel="stylesheet" href="http://sinhambre.herokuapp.com/libs/bower_components/materialize/dist/css/materialize.min.css" media="all">
+		<link rel="stylesheet/less" href="http://sinhambre.herokuapp.com/libs/app/app.less">
+		<script src="http://sinhambre.herokuapp.com/libs/bower_components/less/dist/less.min.js"></script>
+		<script src="http://sinhambre.herokuapp.com/libs/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="http://sinhambre.herokuapp.com/libs/bower_components/materialize/dist/js/materialize.min.js"></script>
+		<script src="http://sinhambre.herokuapp.com/libs/app/app.js"></script>
 	</head>
 	<body>
 		<ul id="slide-out" class="side-nav">
 			<li><img src="img/logo.jpg" class="logo responsive-img circle valign-wrapper"></li>
-			<li class="waves-effect black"><a href="#!">Acerca de Sin Hambre</a></li>
-			<li class="waves-effect black"><a href="#!">Se un proveedor de comida</a></li>
-			<li class="waves-effect black"><a href="#!">Se un usuario de la plataforma</a></li>
+			<li class="waves-effect black"><a href="#section2">Acerca de Sin Hambre</a></li>
+			<li class="waves-effect black"><a href="#section3">Se un proveedor de comida</a></li>
+			<li class="waves-effect black"><a href="#section3">Se un usuario de la plataforma</a></li>
 		</ul>
 		<nav class="generalmenu z-depth-0">
 			<h5 class="orange-text left">
 			<a href="#!" data-activates="slide-out" class="btn-collapse nav-menu-icon left waves-effect black-text"><i class="material-icons">view_headline</i></a>
-			Sin Hambre
+				<a href="http://sinhambre.herokuapp.com/" class="brand">Sin Hambre</a>
 			</h5>
 		</nav>
-		<div class="row section1">
-			<div class="col s12 m12 l12 cc">
-				<div class="carousel carousel-slider center" data-indicators="true">
-					<div class="carousel-fixed-item center">
-						<a href="#!" class="btn gren white-text">Ordenar comida</a>
-						<a href="#!" class="btn gren white-text">Reservar</a>
+		<div id="section1">
+			<div class="slider">
+				<ul class="slides">
+					<li>
+						<img src="http://sinhambre.herokuapp.com/img/banners/vallarta.jpg" alt="vallarta banner">
+						<div class="caption left-align">
+							<h3 class="blue white-text z-depth-3">Restaurantes</h3>
+							<h5 class="light white-text">Disfruta de los restaurantes en la región de Puerto Vallarta y Bahía de Banderas</h5>
+							
+						</div>
+					</li>
+					<li>
+						<img src="http://sinhambre.herokuapp.com/img/banners/tacos.jpg"> <!-- random image -->
+						<div class="caption left-align">
+							<h3 class="green white-text z-depth-3">Compra de comida</h3>
+							<h5 class="blue-text">Compra comida a domicilio en múltiples formas de pago</h5>
+							<h5 class="blue-text">El tiempo que tarda en llegar es variable</h5>
+							<div class="buttons">
+								<a href="http://sinhambre.herokuapp.com/src/requestresolver.php?action=buyfood" class="btn-large waves-effect blue">comprar comida</a>
+							</div>
+							
+						</div>
+					</li>
+					<li>
+						<img src="http://sinhambre.herokuapp.com/img/banners/restaurant.jpg"> <!-- random image -->
+						<div class="caption right-align">
+							<h3 class="orange z-depth-3">Reservaciones</h3>
+							<h5 class="light red-text">Reserva en cualquiera de los restaurantes <br>disponibles en la plataforma</h5>
+							<div class="buttons">
+								<a href="http://sinhambre.herokuapp.com/src/requestresolver.php?action=reservation" class="btn-large waves-effect red">reservar una mesa</a>
+							</div>
+						</div>
+					</li>
+					
+				</ul>
+			</div>
+		</div>
+		<div id="section2" class="row">
+			<div class="col l12 s12 m12">
+				<div class="section-text">
+					<h3 class="title">sin hambre</h3>
+					<div class="line">
+						<span><em></em></span>
 					</div>
-					<div class="carousel-item red white-text" href="#one!">
-						<h2>First Panel</h2>
-						<p class="white-text">This is your first panel</p>
+				</div>
+			</div>
+			<div class="col l6 offset-l3 m12 s12">
+				<h3 class="red-text center-align pacifico"><i>"una aplicación que te quita el hambre"</i></h3>
+				<p class="dark-text center-align">
+					Es una plataforma que facilita a los restaurantes la gestión de procesos, como compra de comida y reservaciones, además permite la publicación de su contenido como: información básica, menús y promociones; los visitantes a la mismas, tendrán la capacidad de crear una cuenta, en la cual seleccionarán los tipos de restaurantes que se adapten a sus gustos personales, con la finalidad de mostrarles promociones y restaurantes que se adapten a su perfil.
+				</p>
+			</div>
+		</div>
+		<div class="container">
+			<div id="section3" class="row">
+				<div class="col l12 s12 m12">
+					<div class="section-text">
+						<h3 class="title">Servicios</h3>
+						<div class="line">
+							<span><em></em></span>
+						</div>
 					</div>
-					<div class="carousel-item amber white-text" href="#two!">
-						<h2>Second Panel</h2>
-						<p class="white-text">This is your second panel</p>
-						<img src="img/banners/restaurant.jpg" alt="">
-					</div>
-					<div class="carousel-item green white-text" href="#three!">
-						<h2>Third Panel</h2>
-						<p class="white-text">This is your third panel</p>
-					</div>
-					<div class="carousel-item blue white-text" href="#four!">
-						<h2>Fourth Panel</h2>
-						<p class="white-text">This is your fourth panel</p>
+				</div>
+				<div class="col l12 s12 m12">
+					<div class="row">
+						<div class="col m4 l4 s12 service">
+							<div class="section-text-responsive">
+								<h3 class="title green-text">Compra de comida</h3>
+								<div class="line">
+									<span><em></em></span>
+								</div>
+							</div>
+							<img src="http://sinhambre.herokuapp.com/img/small/creditcard.jpg" class="responsive-img">
+							<div class="text">
+								<p>La compra de comida integra diversos tipos de pago como: <b>tarjeta de crédito, tarjeta de débito, efectivo</b> (a tratar con el restaurante), estos son elegidos por los proveedores de comida (restaurantes) para agilizar el proceso de compra.</p>
+							</div>
+						</div>
+						<div class="col m4 l4 s12 service">
+							<div class="section-text-responsive">
+								<h3 class="title red-text">Reservaciones</h3>
+								<div class="line">
+									<span><em></em></span>
+								</div>
+							</div>
+							<img src="http://sinhambre.herokuapp.com/img/small/restaurant.jpg" class="responsive-img">
+							<div class="text">
+								<p>Las reservaciones son un servicio presente en la plataforma Sin Hambre, permite al usuario hacer una reservación, a través de la plataforma y automáticamente, se notificará al restaurante que se hizo una reservación. </p>
+							</div>
+						</div>
+						<div class="col m4 l4 s12 service">
+							<div class="section-text-responsive">
+								<h3 class="title cyan-text">Contenido</h3>
+								<div class="line">
+									<span><em></em></span>
+								</div>
+							</div>
+							<img src="http://sinhambre.herokuapp.com/img/small/code.jpg" class="responsive-img">
+							<div class="text">
+								<p><b>!Te interesa la idea!</b>, si eres un restaurante, podrás disfrutar de contenido personalizado, como promociones, menús e información básica de tu restaurant; por otra parte si eres un usuario interesado podrás disfrutar de las mejores promociones y restaurantes que se adapten a tus preferencias</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</body>
+	</body>
 </html>
