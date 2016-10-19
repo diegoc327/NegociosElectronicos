@@ -14,6 +14,8 @@
 			fwrite($filehandler, (string) $reservations);
 
 			fclose($filehandler);
+
+			header("location: ../404.html");
 		}
 		else if($_GET["action"] === "buyfood"){
 			$filehandler = fopen("buyfood.txt", "w+");
@@ -23,6 +25,8 @@
 
 			fwrite($filehandler, (string) $payments);
 			fclose($filehandler);
+
+			header("location: ../404.html");
 		}	
 		else if($_GET["action"] === "newregister"){
 			if(isset($_POST["name"])
@@ -38,10 +42,12 @@
 
 				fwrite($csvfilehandler, $csvdata);
 				fclose($csvfilehandler);
-			}
 
-			header("location: ../index.html");
+				header("location: http://sinhambre.herokuapp.com/");
+			}
+			else 
+				header("location: ../404.html");
 		}
 	}
 
-	header("location: ../404.html");
+	
