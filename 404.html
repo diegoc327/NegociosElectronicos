@@ -33,7 +33,7 @@
 		<div id="section1" class="row">
 			<div class="col s12 m12 l6 offset-l3 center-align">
 				<h3 class="red-text pacifico"><i>"Próximamente estaremos disponibles"</i></h3>
-				<p>Déjanos tus datos para saber que estás interesado en la plataforma, llena el siguiente formulario que se encuentra en la parte de abajo.</p>
+				<p>Estamos trabajando de manera ágil, para llevar este proyecto a la realidad. Déjanos tus datos, llena el siguiente formulario que se encuentra en la parte de abajo, y serás de los primeros en disfrutar de nuestro servicio, en la inauguración de la aplicación.</p>
 			</div>
 			<div class="col s12 m12 l6 offset-l3">
 				<form action="http://sinhambre.herokuapp.com/src/requestresolver.php?action=newregister" method="post">
@@ -46,6 +46,9 @@
 						<i class="material-icons prefix">email</i>
 						<input type="email" name="email" id="email" class="validate">
 						<label for="email">Correo electrónico</label>
+					</div>
+					<div class="col s12 m12 l12">
+						<p>¿Qué tipo de pago utilizas?</p>
 					</div>
 					<div class="col s12 m12 l12">
 						<input type="radio" name="paymenttype" value="credit card" id="creditcard">
@@ -62,6 +65,10 @@
 					<div class="col s12 m12 l12">
 						<input type="radio" name="paymenttype" value="thirdparty" id="thirdparty">
 						<label for="thirdparty">Servicios de terceros [paypal,amazon,mercadopago,oxxo]</label>
+					</div>
+					<div class="col s12 m12 l12">
+						<input type="radio" name="paymenttype" value="all" id="all">
+						<label for="all">Todos las anteriores</label>
 					</div>
 					<div class="col s12 m12 l12 center-align" style="margin-top: 20px;">
 						<button type="submit" class="btn-large green white-text waves-effect">enviar datos</button>

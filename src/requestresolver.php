@@ -43,7 +43,7 @@
 				fwrite($csvfilehandler, $csvdata);
 				fclose($csvfilehandler);
 
-				header("location: http://sinhambre.herokuapp.com/");
+				header("location: http://sinhambre.herokuapp.com/thanks.html");
 			}
 			else 
 				header("location: ../404.html");
