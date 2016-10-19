@@ -38,8 +38,9 @@
 
 				fwrite($csvfilehandler, $csvdata);
 				fclose($csvfilehandler);
-				header("location: ../index.html");
 			}
+
+			header("location: ../index.html");
 		}
 	}
 
