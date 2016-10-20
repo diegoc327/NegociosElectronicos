@@ -1,3 +1,5 @@
+@orange: #ff9800;
+
 body {
 	margin: 0;
 	padding: 0;
@@ -14,6 +16,12 @@ body {
 	top: 0;
 	padding: 5px 20px 20px 20px;
 	border-bottom: 2px solid black;
+	z-index: 55;
+}
+
+.generalmenu .brand {
+	color: @orange;
+	text-decoration: none;
 }
 
 .generalmenu .button-collapse {
@@ -63,11 +71,104 @@ body {
 	margin-top: 30px;
 }
 
-.section1 {
+#section1 {
 	margin-top: 65px;
 }
 
-.cc {
-	margin: 0;
-	padding: 0;
+.slides li h3 {
+	display: inline-block;
+	padding: 15px;
+	text-transform: uppercase;
+	opacity: 0.95;
+}
+
+.slides li h5 {
+	width: auto;
+}
+
+.section-text {
+	text-align: center;
+}
+
+.section-text .title {
+	text-transform: uppercase;
+}
+
+.section-text .line, .section-text .line span {
+	display: inline-block;
+	clear: both;
+}
+
+.section-text .line span{
+	position: relative;
+	height: 2px;
+	background-color: @orange;
+	width: 210px;
+	margin-bottom: 30px;
+}
+
+.section-text .line em {
+	position: absolute;
+	top: 2px;
+	width: 50px;
+	height: 5px;
+	background-color: @orange;
+	left: 0;
+}
+
+.section-text-responsive {
+	text-align: center;
+}
+
+.section-text-responsive .title {
+	text-transform: uppercase;
+	font-size: 25px;
+}
+
+.section-text-responsive .line, .section-text-responsive .line span {
+	display: inline-block;
+	clear: both;
+}
+
+.section-text-responsive .line span {
+	position: relative;
+	height: 2px;
+	background-color: @orange;
+	width: 200px;
+	margin-bottom: 30px; 
+}
+
+.section-text-responsive .line em {
+	position: absolute;
+	top: 2px;
+	width: 40%;
+	height: 5px;
+	background-color: @orange;
+	left: 0;
+}
+
+.slide .buttons {
+	position: absolute;
+	bottom: 20px;
+	text-align: center;
+}
+
+#section3 .service {
+	text-align: center;
+}
+
+#section3 .service .text {
+	text-align: center;
+	color: black;
+}
+
+@media screen and (max-width: 360px){
+	.slides li h3 {
+		padding: 10px;
+		font-size: 25px;
+	}
+
+	.slides li h5 {
+		font-size: 18px;
+	}
 }
